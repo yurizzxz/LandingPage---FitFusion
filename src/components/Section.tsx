@@ -1,22 +1,28 @@
 import { Link } from "react-router-dom";
 import futurismoFitnessImage from "../assets/training.jpg";
+import fb from "../assets/firebase.png";
+import fastifylogo from "../assets/Fastify_logo.png";
+import typescriptlogo from "../assets/typescript.png";
+import reactlogo from "../assets/react-logo.webp";
 
 export function Section() {
   return (
     <>
-     <main className="hero-section">
-    <div className="overlay Container">
-        <h1 className="section-title">Alcance Seus</h1>
-        <h1 className="section-title">Objetivos de</h1>
-        <h1 className="section-title">Forma Inteligente!</h1>
-        <p className="subtitleHero">
-            Você está pronto para levar sua saúde e bem-estar a um novo nível? Unimos dados comprovados para criar uma experiência única de treino, alimentação e conhecimento!
-        </p>
-        <div className="button">
+      <main className="hero-section">
+        <div className="overlay Container">
+          <h1 className="section-title">Alcance Seus</h1>
+          <h1 className="section-title">Objetivos de</h1>
+          <h1 className="section-title">Forma Inteligente!</h1>
+          <p className="subtitleHero">
+            Você está pronto para levar sua saúde e bem-estar a um novo nível?
+            Unimos dados comprovados para criar uma experiência única de treino,
+            alimentação e conhecimento!
+          </p>
+          <div className="button">
             <button type="submit">Experimente agora!</button>
+          </div>
         </div>
-    </div>
-</main>
+      </main>
 
       {/* conteúdo landing */}
       <main className="contentSection">
@@ -28,9 +34,21 @@ export function Section() {
             no mundo da saúde e bem-estar. Isso garante que você tenha acesso às
             informações mais relevantes para a sua jornada.
           </p>
+          <div className="Techs">
+            <p className="usedtechs">Tecnologias usadas dentro do projeto:</p>
+            <div className="TechsLayout">
+              <img className="tech-logo" src={typescriptlogo} alt="" />
+              <img className="tech-logo" src={reactlogo} alt="" />
+              <img className="tech-logo" src={fastifylogo} alt="" />
+              <img className="tech-logo" src={fb} alt="" />
+            </div>
+          </div>
         </div>
 
-        <div className="Container-Img Reverse section-dark" style={{ marginBottom: 60}}>
+        <div
+          className="Container-Img Reverse section-dark"
+          style={{ marginBottom: 60 }}
+        >
           <div className="ImageSection">
             <img
               src={futurismoFitnessImage}
