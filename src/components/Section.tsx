@@ -4,7 +4,48 @@ import fb from "../assets/firebase.png";
 import fastifylogo from "../assets/Fastify_logo.png";
 import typescriptlogo from "../assets/typescript.png";
 import reactlogo from "../assets/react-logo.webp";
+import QRCode from "qrcode.react";
 
+const BenefitCard = ({ icon, title, description }) => {
+  return (
+    <div className="BenefitCard">
+      <div className="Icon">
+        <i className={icon}></i>
+      </div>
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+  );
+};
+
+const benefits = [
+  {
+    icon: "fas fa-dumbbell",
+    title: "Treinos Sob Medida",
+    description:
+      "Cada treino é ajustado conforme sua escolha, evitando planos genéricos.",
+  },
+  {
+    icon: "fas fa-apple-alt",
+    title: "Nutrição Inteligente",
+    description: "Receitas e dietas adaptadas aos seus objetivos de saúde.",
+  },
+  {
+    icon: "fas fa-book",
+    title: "Artigos Inspiradores",
+    description: "Conteúdo atualizado sobre treinos, nutrição e suplementação.",
+  },
+  {
+    icon: "fas fa-star",
+    title: "Resultados Visíveis",
+    description: "Transforme seu corpo e mente com nosso método eficaz.",
+  },
+  {
+    icon: "fas fa-brain",
+    title: "Abordagem Baseada em Ciência",
+    description: "Recomendações fundamentadas em pesquisa e dados científicos.",
+  },
+];
 export function Section() {
   return (
     <>
@@ -35,7 +76,6 @@ export function Section() {
             informações mais relevantes para a sua jornada.
           </p>
           <div className="Techs">
-            <p className="usedtechs">Tecnologias usadas dentro do projeto:</p>
             <div className="TechsLayout">
               <img className="tech-logo" src={typescriptlogo} alt="" />
               <img className="tech-logo" src={reactlogo} alt="" />
@@ -44,7 +84,6 @@ export function Section() {
             </div>
           </div>
         </div>
-
         <div
           className="Container-Img Reverse section-dark"
           style={{ marginBottom: 60 }}
@@ -70,6 +109,17 @@ export function Section() {
           </div>
         </div>
 
+        <div className="BenefitsSection">
+          {benefits.map((benefit, index) => (
+            <BenefitCard
+              key={index}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+            />
+          ))}
+        </div>
+
         <div className="Container-Img section-white">
           <div className="TextSection">
             <h3>O Futuro do Fitness</h3>
@@ -80,6 +130,75 @@ export function Section() {
               como sua aliada, você estará sempre um passo à frente, recebendo
               orientações que evoluem conforme você avança.
             </p>
+            <ul
+              style={{
+                listStyleType: "none",
+                padding: 0,
+                marginBlock: 20,
+                display: "flex",
+                flexDirection: "column",
+                gap: 5,
+              }}
+            >
+              <li
+                style={{
+                  fontSize: 20,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 10,
+                }}
+              >
+                <i
+                  className="fas fa-check-circle"
+                  style={{ color: "#00bb83" }}
+                ></i>
+                Abordagem personalizada
+              </li>
+              <li
+                style={{
+                  fontSize: 20,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 10,
+                }}
+              >
+                <i
+                  className="fas fa-check-circle"
+                  style={{ color: "#00bb83" }}
+                ></i>
+                Resultados baseados em dados
+              </li>
+              <li
+                style={{
+                  fontSize: 20,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 10,
+                }}
+              >
+                <i
+                  className="fas fa-check-circle"
+                  style={{ color: "#00bb83" }}
+                ></i>
+                Suporte contínuo
+              </li>
+            </ul>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#00bb83",
+                color: "white",
+                padding: "15px 25px",
+                border: "none",
+                borderRadius: "5px",
+                fontSize: 20,
+              }}
+            >
+              Experimente Agora
+            </button>
           </div>
           <div className="ImageSection">
             <img
@@ -90,7 +209,7 @@ export function Section() {
           </div>
         </div>
 
-        <div className="Container section-white card-layout">
+        <div className="Container section-dark card-layout">
           <h3>Transformação em Cada Passo</h3>
           <div className="cards">
             <div className="card">
@@ -120,15 +239,25 @@ export function Section() {
             </div>
           </div>
         </div>
-
-        <div className="Container">
-          <h3>Pronto para a Transformação?</h3>
-          <p>
-            No FitFusion, o conhecimento nunca para. Estamos sempre atualizando
-            nosso conteúdo com as últimas tendências e descobertas científicas
-            no mundo da saúde e bem-estar. Isso garante que você tenha acesso às
-            informações mais relevantes para a sua jornada.
-          </p>
+        <div
+          className="Container-Img Reverse section-white"
+          style={{ marginBottom: 60 }}>
+          <div className="ImageSection">
+            <img
+              src={futurismoFitnessImage}
+              alt="Ilustração do FitFusion"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="TextSection">
+            <h3>Pronto para se transformar?</h3>
+            <p>
+              No FitFusion, o conhecimento nunca para. Estamos sempre
+              atualizando nosso conteúdo com as últimas tendências e descobertas
+              científicas no mundo da saúde e bem-estar. Isso garante que você
+              tenha acesso às informações mais relevantes para a sua jornada.
+            </p>
+          </div>
         </div>
       </main>
     </>

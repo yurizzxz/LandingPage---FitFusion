@@ -15,7 +15,7 @@ body {
 }
 
 .section-dark {
-    background: #101010;
+    background: #070707;
     color: white;
     padding-bottom: 5vh;
 }
@@ -25,10 +25,17 @@ body {
     background: white;
     color: black;
 }
+.section-white:nth-child(4) {
+    border-top: 3px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-image: linear-gradient(to right, #006644, #009966, #00b388) 1;
+    border-image-source: linear-gradient(to right, #006644, #009966, #00b388);
+}
 
-.section-white:nth-child(3){
-    padding-block: 2vh;
-    border-bottom: 6px solid #009966;
+
+.section-white:nth-child(6) {
+    padding-left: 5vw;
+    padding-block: 5vw;
 }
 
 .section-white:nth-child(4){
@@ -78,7 +85,6 @@ body {
 }
 
 .nav>.nav-links>a {
-
     padding: 15px 10px;
     text-decoration: none;
     color: #efefef;
@@ -231,7 +237,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 0% 100%, hsla(160, 100%, 1%, 0.966) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+    background: radial-gradient(circle at 0% 100%, hsla(160, 100%, 1%, 0.966) 35%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
 }
 
@@ -298,16 +304,16 @@ body {
 
 .contentSection {
     position: relative;
-    padding: 70px 5px;
-    background: #101010;
+    background: #070707;
     color: white;
     font-size: 2.5rem;
+    margin-bottom: -60px;
 }
 
 .contentSection::before {
     content: '';
     position: absolute;
-    top: -20px; 
+    top: 0px; 
     left: 0;
     width: 100%;
     height: 20px; 
@@ -365,19 +371,20 @@ body {
     font-size: 17px !important;
 }
 .TechsLayout {
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    background-color: #f9f9f9;
+    background-color: #202020;
     flex-wrap: wrap;
 }
 
 .tech-logo {
     max-width: 5%; 
     height: auto; 
-    margin: 0.5rem; 
+    margin: 0.6rem; 
     flex: 1 1 auto; 
     object-fit: cover;
 }
@@ -431,6 +438,10 @@ body {
     padding: 0  0.5vw;
 }
 
+.Container-Img:nth-child(2) {
+    padding: 0  3vw;
+}
+
 .TextSection {
     flex: 1; 
     padding-left: 80px;
@@ -452,8 +463,42 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.BenefitsSection {
+    padding: 4vw 2vw 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.BenefitCard {
+    background-color: #0a0a0a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Icon {
+    font-size: 40px;
+    color: #00bb83;
+    margin-bottom: 10px;
+}
+
+.BenefitCard h4 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.BenefitCard p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
 .card-layout {
-    padding-top: 4vw;
+    padding-block: 1.5vw 5vw !important;
 }
 
 .cards {
@@ -467,7 +512,7 @@ body {
 
 .card {
     flex: 1 1 200px; 
-    background: #f9f9f9; 
+    background: #0e0e0e; 
     padding: 15px; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
